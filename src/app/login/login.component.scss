@@ -1,0 +1,18 @@
+.box1{
+    top: 0;
+    left: 100000px;
+    background-color: lightgrey;
+    width: 100%;
+    border: 5px solid lightgrey;
+    padding: 50px;
+    margin: 20px;
+  }
+  .form-group input.ng-invalid.ng-touched {
+      
+    border-left:8px solid red;
+  }
+  .form-group input.ng-valid:not(form).ng-touched{
+    border-left: 8px solid green;
+    
+}
+

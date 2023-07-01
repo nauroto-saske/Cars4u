@@ -1,0 +1,39 @@
+fieldset {
+    overflow: hidden
+  }
+  
+  .some-class {
+    float: left;
+    clear: none;
+  }
+  
+  label {
+    float: left;
+    clear: none;
+    display: block;
+    padding: 0px 1em 0px 8px;
+  }
+  
+  input[type=radio],
+  input.radio {
+    float: left;
+    clear: none;
+    margin: 8px 0 0 2px;
+  }
+
+  .box1{
+    background-color: lightgrey;
+    width: 50%;
+    border: 5px solid lightgrey;
+    padding: 50px;
+    margin: 20px;
+  }
+
+  .form-group input.ng-invalid.ng-touched {
+      
+    border-left:8px solid red;
+  }
+  .form-group input.ng-valid:not(form).ng-touched{
+    border-left: 8px solid green;
+    
+}
