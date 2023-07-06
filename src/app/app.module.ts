@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } 
     from "@angular/platform-browser/animations";
+import RegisterService from './Models/register.service';
+import { HttpClientModule } from '@angular/common/http';
 
     
 export const appRoutes: Routes = [  
@@ -30,13 +32,14 @@ export const appRoutes: Routes = [
     DashboardComponent,
     LoginComponent,
     RegisterComponent,
-    AddListingComponent
+    AddListingComponent,
+    
   ],
   imports: [
     
     BrowserModule,
     BrowserAnimationsModule,
-   
+    HttpClientModule,
     FormsModule,
     ButtonModule,
     SpeedDialModule,
@@ -48,7 +51,7 @@ export const appRoutes: Routes = [
     ButtonModule,
     RouterModule.forRoot(appRoutes) 
   ],
-  providers: [],
+  providers: [RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
