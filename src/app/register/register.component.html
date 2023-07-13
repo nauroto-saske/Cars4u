@@ -1,68 +1,67 @@
-<div class="box1 container">
-
-
-<div>
-    <h3>Register</h3>
-    <hr>
-    <h6>Create new account today.</h6>
-
-</div>
-<div class="row mt-1">    
-    
-    <form #Registration="ngForm">    
-      <div class="form-group  col-6 m-2 p-2">    
-        <label for="Uname">Username</label>    
-        <input type="text" class="form-control"  name="Uname" id="Uname"
-        #Uname="ngModel" [(ngModel)]="username" placeholder="User Name*" required >    
-      </div>  
-      <span *ngIf="!Uname?.valid && (Uname?.dirty || Uname?.touched)" style="color : red">
-        Invalid User Name
-      </span>    
-      <div class="form-group  col-6 m-2 p-2">    
-        <label for="Email">Email Adress</label>    
-        <input type="text" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  name="Email" 
-        id="Email" placeholder="Email*" #Email="ngModel" [(ngModel)]="EmailAddress" required>    
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="box1">
+        <div class="row mt-1">
+          <form #Registration="ngForm">
+            <div>
+              <h1>Register</h1>
+              <h3>Create new account today.</h3>
+            </div><br>
+            <div class="form-group  col-7 m-2 p-2">
+              <label for="Uname">Username</label>
+              <input type="text" class="form-control" name="Uname" id="Uname" #Uname="ngModel" [(ngModel)]="username"
+                placeholder="User Name*" required>
+                <span *ngIf="!Uname?.valid && (Uname?.dirty || Uname?.touched)" style="color : red;float: right;">
+                  Invalid User Name
+                </span>
+            </div>
+            
+            <div class="form-group  col-7 m-2 p-2">
+              <label for="Email">Email Adress</label>
+              <input type="text" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="Email"
+                id="Email" placeholder="Email*" #Email="ngModel" [(ngModel)]="EmailAddress" required>
+                <span *ngIf="!Email?.valid && (Email?.dirty || Email?.touched)" style="color : red;float: right;">
+                  Invalid Email
+                </span>
+              </div>
+            <div class="form-group col-7 m-2 p-2">
+              <label for="phone">Phone</label>
+              <input type="number" class="form-control" id="phone" name="phone" placeholder="phone" pattern="[0-9]*"
+                maxlength="10" [(ngModel)]="phone">
+            </div>
+            <div class="form-group col-7 m-2 p-2">
+              <label for="inputEmail4">Password</label>
+              <input type="password" class="form-control" id="Password" name="Password" placeholder="Password"
+                #Password="ngModel" [(ngModel)]="password" required>
+                <span *ngIf="!Password?.valid && (Password?.dirty || Password?.touched)" style="color : red;float: right;">
+                  Invalid Password
+                </span>
+            </div>
+            <div class="form-group col-12 m-2 p-2">
+              <input type="checkbox" id="fpwd" name="fpwd" value="Boat" style="background-color: aliceblue;" #fpwd="ngModel"
+                [(ngModel)]="chkvendor"> &nbsp;
+              <span>I am a Vendor</span> &nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="fpwd" name="fpwd" value="Boat" style="background-color: aliceblue;" #fpwd="ngModel"
+                [(ngModel)]="chkadmin"> &nbsp;
+              <span>I am a Admin</span> &nbsp;
+            </div>
+            <div class="form-group  col-7 m-2 p-2">
+              <input type="checkbox" id="cds" name="cds" value="cds" style="background-color: aliceblue;" #cds="ngModel"
+                [(ngModel)]="chkprivacy">&nbsp;
+              <span>I accept the <a style="color: violet">Privacy Policy</a></span>
+              <span *ngIf="!cds?.valid && (cds?.dirty || cds?.touched)" style="color : red">
+                Please select Privacy policy
+              </span>
+            </div>
+            <div class="form-group  col-7 m-2 p-2">
+              <p-button label="Signup" [disabled]="!Registration.form.valid" (click)="onSubmit()"></p-button>
+            </div>
+          </form>
+        </div>
       </div>
-      <span *ngIf="!Email?.valid && (Email?.dirty || Email?.touched)" style="color : red">
-        Invalid Email
-      </span> 
-      <div class="form-group col-6 m-2 p-2">    
-        <label for="phone">Phone</label>    
-        <input type="number" class="form-control" id="phone" name="phone" placeholder="phone" pattern="[0-9]*" maxlength="10"  [(ngModel)]="phone">    
-      </div>   
-      <div class="form-group col-6 m-2 p-2">    
-        <label for="inputEmail4">Password</label>    
-        <input type="password" class="form-control" id="Password" name="Password" placeholder="Password" 
-        #Password="ngModel" [(ngModel)]="password" required>    
-      </div> 
-      <span *ngIf="!Password?.valid && (Password?.dirty || Password?.touched)" style="color : red">
-        Invalid Password
-      </span>    
-     
-      <div class="form-group col-6 m-2 p-2">  
-       
-        <input type="checkbox" id="fpwd" name="fpwd" value="Boat" style="background-color: aliceblue;" 
-         #fpwd="ngModel" [(ngModel)]="chkvendor" > &nbsp;
-         <span>I am a Vendor</span> &nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="checkbox" id="fpwd" name="fpwd" value="Boat" style="background-color: aliceblue;" 
-        #fpwd="ngModel" [(ngModel)]="chkadmin" > &nbsp;
-        <span>I am a Admin</span> &nbsp;
-       
-      </div> 
-      <div class="form-group  col-6 m-2 p-2">    
-        <input type="checkbox" id="cds" name="cds" value="cds" style="background-color: aliceblue;"
-        #cds="ngModel" [(ngModel)]="chkprivacy">&nbsp;
-        <span>I accept the <a style="color: violet">Privacy Policy</a></span>
-        <span *ngIf="!cds?.valid && (cds?.dirty || cds?.touched)" style="color : red">
-          Please select Privacy policy
-        </span>
-      
-      </div> 
-      <div class="form-group  col-6 m-2 p-2">
-        
-<p-button label="Signup" [disabled]="!Registration.form.valid" (click)="onSubmit()"></p-button>
-      </div>   
-      </form>
-      </div>
+    </div>      
     </div>
+</div>
+

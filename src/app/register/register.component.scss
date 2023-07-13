@@ -1,7 +1,12 @@
+.card{
+  background-color: #FFF;
+  border: none;
+  height: 100%;
+}
 fieldset {
     overflow: hidden
   }
-  
+
   .some-class {
     float: left;
     clear: none;
@@ -22,13 +27,15 @@ fieldset {
   }
 
   .box1{
-    background-color: lightgrey;
-    width: 50%;
-    border: 5px solid lightgrey;
-    padding: 50px;
-    margin: 20px;
+    width: 100%;
+    padding: 90px 140px 90px 90px;
+    min-height: 600px;
   }
-
+h3{
+  font-size: 15px;
+    line-height: 19px;
+    font-weight: 500;
+}
   .form-group input.ng-invalid.ng-touched {
       
     border-left:8px solid red;

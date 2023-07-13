@@ -1,56 +1,54 @@
-
-<div class=" container box1">
-
-
-
-<div>
-    <h3>Log in to your account</h3>
-    <hr>
-    <h6>Welcome back! Sign in to your account</h6>
-
-</div>
-<div class="row mt-1">    
-    
-    <form #LoginForm="ngForm" id="loginForm">  
-      <div class="form-group "> 
-      <div class="form-group  col-6 m-2 p-2">    
-        <label for="Email">Email Adress</label>    
-        <input type="text" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  #Email="ngModel"
-        name="Email" id="Email" placeholder="User Name or Email" style="width : 50%"  [(ngModel)]="EmailAddress" 
-        [ngClass]="{error: !Email?.valid && (Email?.dirty || Email?.touched) }" required>    
-      </div> 
-      <span *ngIf="!Email?.valid && (Email?.dirty || Email?.touched)" style="color : red">
-        Invalid First Name
-      </span>   
-      <div class=" col-6 m-2 p-2">    
-        <label for="pwd">Password</label>    
-        <input type="password" class="form-control" id="pwd" name="pwd" #pwd="ngModel" 
-        placeholder="Password" style="width : 50%" [(ngModel)]="Pwd" minlength="5" required>    
-        
-      </div> 
-      <!-- <span *ngIf="!pwd?.errors?.['minlength'] && (pwd?.dirty || pwd?.touched)">
-          Please match the minimum length
-      </span> -->
-      <span *ngIf="!pwd?.valid && (pwd?.dirty || pwd?.touched)" style="color : red">
-        Invalid password
-      </span>  
-           
-      <div class=" col-6 m-2 p-2">    
-        <input type="checkbox" id="fpwd" name="fpwd" value="Boat" style="background-color: aliceblue;" 
-         #fpwd="ngModel" [(ngModel)]="chkremember" required>&nbsp;
-        <label for="fpwd"> Remember</label>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a for="fpwd">Forget Password?</a>
-       
-      </div> 
-      <span *ngIf="!fpwd?.valid && (fpwd?.dirty || fpwd?.touched)" style="color : red">
-        please click the  Remember checkbox
-      </span>  
-      <div class="  col-6 m-2 p-2">
-        
-<p-button label="LogIn" [disabled]="!LoginForm.form.valid" (click)="onSubmit()"></p-button>
-      </div>
-      </div>   
-      </form>
+<div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="box1">
+        <form #LoginForm="ngForm" id="loginForm">
+          <div class="form-group ">
+            <div>
+              <h1>Log in to your account</h1>
+              <h3>Welcome back! Sign in to your account</h3>
+            </div><br>
+            <div class="form-group col-7 m-2 p-2">
+              <label for="Email">Email Adress</label>
+              <input type="text" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" #Email="ngModel"
+                name="Email" id="Email" placeholder="User Name or Email" style="width : 100%" [(ngModel)]="EmailAddress"
+                [ngClass]="{error: !Email?.valid && (Email?.dirty || Email?.touched) }" required>
+            <span *ngIf="!Email?.valid && (Email?.dirty || Email?.touched)" style="color : red;float: right;">
+              Invalid User Name
+            </span>
+            </div>
+            <div class=" col-7 m-2 p-2">
+              <label for="pwd">Password</label>
+              <input type="password" class="form-control" id="pwd" name="pwd" #pwd="ngModel" placeholder="Password"
+                style="width : 100%" [(ngModel)]="Pwd" minlength="5" required>
+                <span *ngIf="!pwd?.valid && (pwd?.dirty || pwd?.touched)" style="color : red;float: right;">
+                  Invalid password
+                </span>
+            </div>
+            <!-- <span *ngIf="!pwd?.errors?.['minlength'] && (pwd?.dirty || pwd?.touched)">
+                Please match the minimum length
+            </span> -->
+            <div class=" col-12 m-2 p-2">
+              <input type="checkbox" id="fpwd" name="fpwd" value="Boat" style="background-color: aliceblue;"
+                #fpwd="ngModel" [(ngModel)]="chkremember" required>&nbsp;
+              <label for="fpwd"> Remember</label>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a for="fpwd" href="#">Forget Password?</a>
+              <span *ngIf="!fpwd?.valid && (fpwd?.dirty || fpwd?.touched)" style="color : red;float: right;">
+                please click the Remember checkbox
+              </span>
+            </div>
+            <div class="  col-6 m-2 p-2">
+              <p-button label="LogIn" [disabled]="!LoginForm.form.valid" (click)="onSubmit()"></p-button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
+  </div>
+  <div class="col-6">
+    <div class="card">
+      <app-register></app-register>
+    </div>
+  </div>
+</div>

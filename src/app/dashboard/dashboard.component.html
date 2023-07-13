@@ -1,96 +1,64 @@
-
-
 <div id="sect1">
-    <nav>
-        <div class="row col-sm-12">
-            <div class="col-sm-2">
-                
-                <h1 style="color:blue">Vehica</h1> 
-            </div>
-            <div class="col-sm-5">
-                <ul>
-            
-                    <li><a href="#">Home</a></li><span></span>
-                    <li><a href="#">Search</a></li>
-                    <li><a href="#">Listing</a></li>
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">More</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-5">
-                <ul>
-            
-                    <li><a routerLink="/login"><i style="bottom: 4cm;" class="pi pi-user" ></i>&nbsp;Login</a></li>
-                    <li><a>|</a>  </li>
-                    <li><a routerLink="/Register">Register</a></li>
-                    <li><a routerLink="/AddListing" class="listing"><i style="bottom: 4cm;" class="pi pi-plus" ></i>&nbsp;Add Listing</a></li>
-                    
-                </ul>
-            </div>
-        </div>
-        
-       
-    </nav>
+    <h1 class="car">Find Your&nbsp;<span style="color: #ff4605;">Perfect</span>&nbsp;Car</h1>
+    <br><br>
 
- <br>
- <br>
- <h1 class="car">Find  Your&nbsp;<span style="color: brown;">Perfect</span>&nbsp;Car</h1>
-   
-<br><br>
-<div style="opacity: 0.3;border-radius: 45px;font-style: italic;color: blueviolet; width: 50%;margin-left: 10cm; ">
-    
-        <p-toolbar>
-            <div class="p-toolbar-group-start">
-                <p-dropdown 
-                [options]="Model"
-                placeholder="All Makes"
-                optionLabel="name"
-                [showClear]="true">
-              </p-dropdown> &nbsp;
-              <p-dropdown 
-              [options]="lang"
-              placeholder="All Models"
-              optionLabel="name"
-              [showClear]="true">
-            </p-dropdown>&nbsp;
-            <p-dropdown 
-            [options]="price"
-            placeholder="All Makes"
-            optionLabel="name"
-            [showClear]="true">
-          </p-dropdown>
-            </div>
-            <div class="p-toolbar-group-end">
-                <p-button icon="pi pi-search" class="mr-2"></p-button>
-            </div>
-           
-        </p-toolbar>
-   
-    
-    
-    
+    <!-- <div class="card flex justify-content-center">
+        <p-card header="Advanced Card" subheader="Card Subheader" [style]="{ width: '360px' }">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
+            </ng-template>
+            <p>
+            </p>
+            <ng-template pTemplate="footer">
+                <p-button label="Save" icon="pi pi-check"></p-button>
+                <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+            </ng-template>
+        </p-card>
+    </div> -->
+
+    <div class="card flex justify-content-center">
+        <p class="m-0">
+            <p-toolbar>
+                <div class="p-toolbar-group-start">
+                    <p-dropdown [options]="Model" placeholder="All Makes" optionLabel="name" [showClear]="true" autoWidth="false" [style]="{'width':'120%'}">
+                    </p-dropdown>&nbsp;&nbsp;
+                    <p-dropdown [options]="lang" placeholder="All Models" optionLabel="name" [showClear]="true" autoWidth="false" [style]="{'width':'100%', 'margin-left':'30px'}">
+                    </p-dropdown>&nbsp;&nbsp;
+                    <p-dropdown [options]="price" placeholder="All price" optionLabel="name" [showClear]="true" autoWidth="false" [style]="{'width':'100%', 'margin-left':'30px'}">
+                    </p-dropdown>&nbsp;&nbsp;
+                    <div class="p-toolbar-group-end" style="float: right;">
+                        <p-button icon="pi pi-search" styleClass="p-button-warning" [style]="{'width':'200%','margin-left':'30px'}">Search</p-button>
+                    </div>
+                </div>
+            </p-toolbar>
+        </p>
 </div>
-<br>
-<br>
-<br>
-<div style="margin-left: 10cm;">
-    <div>
-        <img src="../../assets/images/car1.svg" style="height: 5%;width: 5%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="../../assets/images/car2.svg" style="height: 5%;width: 5%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="../../assets/images/car7.svg" style="height: 5%;width: 5%; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="../../assets/images/car5.svg" style="height: 5%;width: 5%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="../../assets/images/car6.svg" style="height: 5%;width: 5%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    
-    </div>
-    <span style="color: rgb(218, 23, 23)">
-        <a>Sedan</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a style="margin-left: 0.7cm;">Cupe</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a>Suv</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a>Hatchback</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a>Convertible</a>
-    </span>
-        
-    
-       
-</div>
+    <br>
+    <br>
+    <br>
+    <!-- <div style="margin-left: 10cm;">
+        <div>
+            <img src="../../assets/images/car1.svg"
+                style="height: 5%;width: 5%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="../../assets/images/car2.svg"
+                style="height: 5%;width: 5%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="../../assets/images/car7.svg"
+                style="height: 5%;width: 5%; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="../../assets/images/car5.svg"
+                style="height: 5%;width: 5%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="../../assets/images/car6.svg"
+                style="height: 5%;width: 5%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        </div>
+        <span style="color: rgb(218, 23, 23)">
+            <a>Sedan</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a
+                style="margin-left: 0.7cm;">Cupe</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a>Suv</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a>Hatchback</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a>Convertible</a>
+        </span>
+
+
+    </div> -->
 </div>

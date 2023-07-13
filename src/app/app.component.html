@@ -1,1 +1,38 @@
-<router-outlet></router-outlet>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Cars4u</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <nav>
+        <div class="row col-sm-12">
+            <div class="col-sm-1">
+                <h1 style="color:#ff4605;">Cars4u</h1> 
+            </div>
+            <div class="col-sm-6">
+                <ul>
+                    <li><a href="#">Home</a></li><span></span>
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Listing</a></li>
+                    <li><a href="#">Page</a></li>
+                    <li><a href="#">More</a></li>
+                    <li><a routerLink="/Admin">Admin</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-5">
+                <ul>
+                    <li><a routerLink="/login"><i style="bottom: 4cm;" class="pi pi-user"></i>&nbsp;Login</a></li>
+                    <li><a>|</a></li>
+                    <li><a routerLink="/login">Register</a></li>
+                    <li><a routerLink="/AddListing" class="listing"><i style="bottom: 4cm;" class="pi pi-plus"></i>&nbsp;Add Listing</a></li>   
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <router-outlet></router-outlet>
+</body>
+</html>
