@@ -1,0 +1,45 @@
+.card{
+    width: 60%;
+    margin-left: 8cm;
+    margin-top: 3cm;
+    border: none;
+}
+#listingForm{
+    background-color:#f2f5fb !important;
+}
+.container{
+    border: none;
+    box-shadow: #555555;
+    padding: 20px;
+    margin: 20px 0;
+    background-color:#FFF !important;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+#demo-file::file-selector-button {
+	border: 2px solid #555555;
+	color: #555555;
+	padding: 8px;
+	border-radius: 4px;
+	background-color: #ffffff;
+}
+
+#demo-file::file-selector-button:hover {
+	background-color: #e9e9e9;
+}
+
+#demo-file::-webkit-file-upload-button {
+	border: 2px solid #555555;
+	color: #555555;
+	padding: 8px;
+	border-radius: 4px;
+	background-color: #ffffff;
+}
+
+#demo-file::-webkit-file-upload-button:hover {
+	background-color: #e9e9e9;
+}
+  
+.preview {
+    max-width: 200px;
+  }

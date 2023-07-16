@@ -8,7 +8,7 @@ import { MenuItem,MessageService } from 'primeng/api';
   providers: [MessageService]
 })
 export class AppComponent implements OnInit {
-  title = 'Ecommerce';
+  title = 'Cars4u';
   products : any;
   constructor(private messageService: MessageService) {}
   ngOnInit(): void {
