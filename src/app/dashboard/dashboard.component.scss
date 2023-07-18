@@ -15,12 +15,40 @@
   font-weight: bold;
   text-align: center;
 }
-.card {
+.card{
   width: 56%;
-  margin-left: 10.4cm;
   background-color: #fff;
   border-radius: 20px;
   padding: 16px 22px 17px;
   box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
   position: relative;
+}
+:host ::ng-deep {
+  .product-item {
+      .product-item-content {
+          border: 1px solid var(--surface-d);
+          border-radius: 3px;
+          margin: .3rem;
+          text-align: center;
+          padding: 2rem 0;
+      }
+  
+      .product-image {
+          width: 50%;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+      }
+  }
+}
+
+.heading-title{
+  font-family: 'Muli',Arial,Helvetica,sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+}
+.text-editor {
+  font-family: 'Muli',Arial,Helvetica,sans-serif!important;
+  color: #6f6f6f;
+  font-size: 15px;
+  line-height: 27px;
 }

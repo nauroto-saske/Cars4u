@@ -1,0 +1,263 @@
+<div class="road container-fluid">
+<br>
+
+<div class="row col-sm-12">
+    <div class="col-sm-3" >
+        
+        <p-dropdown [options]="make"  optionLabel="name"  [style]="{'minWidth':'100%'}"></p-dropdown>
+    </div>
+    <div class="col-sm-3">
+        <p-dropdown [options]="model"  optionLabel="name" [style]="{'minWidth':'100%'}"></p-dropdown>
+    </div>
+    <div class="col-sm-3">
+        <p-dropdown [options]="distance"  optionLabel="name" [style]="{'minWidth':'100%'}"></p-dropdown>        
+    </div>
+    <div class="col-sm-3">
+        <p-dropdown [options]="type"  optionLabel="name" [style]="{'minWidth':'100%'}"></p-dropdown>        
+    </div>
+</div>
+<br>
+<div class="row col-sm-12">
+    <div class="col-sm-3" >
+        
+        <p-dropdown [options]="milleage"  optionLabel="name"  [style]="{'minWidth':'100%'}"></p-dropdown>
+    </div>
+    <div class="col-sm-3">
+        <p-dropdown [options]="drivetype"  optionLabel="name" [style]="{'minWidth':'100%'}"></p-dropdown>
+    </div>
+    <div class="col-sm-3">
+        <p-dropdown [options]="fueltype"  optionLabel="name" [style]="{'minWidth':'100%'}"></p-dropdown>
+        
+    </div>
+    <div class="col-sm-3">
+        <p-dropdown [options]="features"  optionLabel="name" [style]="{'minWidth':'100%'}"></p-dropdown>
+        
+    </div>
+</div>
+</div>
+
+<div class="card" id="firstCard">
+    <p-tabView>
+      <p-tabPanel header="All">
+        <p-card >
+            <div class="row col-sm-12">
+
+            
+            <div class="col-sm-3">
+                <img src="../../assets/images/A.jpg" style="height: 30%">&nbsp;
+            </div>
+            <div class="col-sm-9">
+               <h3>Mercedes Benz AMG GT 2-door Couple review</h3>
+               <p style="color: bisque;opacity: 0.5cm;">blind spot,bluetooth,Heated seat,Memory seat</p>
+               <p style="color:orangered;">Location : <span>Abcd,London</span></p>
+                <h2 style="margin-left: 23cm;color:orangered;">$10000</h2>
+            </div>
+        </div>
+        
+           
+        </p-card>
+       
+      </p-tabPanel>
+      <p-tabPanel header="NEW">
+        <p-card>
+            <div class="row col-sm-12">
+
+            
+            <div class="col-sm-3">
+                <img src="../../assets/images/v.jpg" style="height: 70%;width: 70%">&nbsp;
+            </div>
+            <div class="col-sm-9">
+               <h3>Mercedes Benz AMG GT 2-door Couple review</h3>
+               <p style="color: bisque;opacity: 0.5cm;">blind spot,bluetooth,Heated seat,Memory seat</p>
+               <p style="color:orangered;">Location : <span>Abcd,London</span></p>
+                <h2 style="margin-left: 23cm;color:orangered;">$10000</h2>
+            </div>
+        </div>
+        
+           
+        </p-card>
+      </p-tabPanel>
+      <p-tabPanel header="Old">
+        <p-card >
+            <div class="row col-sm-12">
+
+            
+            <div class="col-sm-3">
+                <img src="../../assets/images/x.jpg" style="height: 80%;width: 80%">&nbsp;
+            </div>
+            <div class="col-sm-9">
+               <h3>Mercedes Benz AMG GT 2-door Couple review</h3>
+               <p style="color: bisque;opacity: 0.5cm;">blind spot,bluetooth,Heated seat,Memory seat</p>
+               <p style="color:orangered;">Location : <span>Abcd,London</span></p>
+                <h2 style="margin-left: 23cm;color:orangered;">$10000</h2>
+            </div>
+        </div>
+        
+           
+        </p-card>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+  
+  <div class="card" style="display: none">
+    <h5>Programmatic</h5>
+    <div style="padding: .5em 0 1em 0">
+      <p-button (click)="activeIndex = 0" styleClass="p-button-text" label="Activate 1rd"></p-button>
+      <p-button (click)="activeIndex = 1" styleClass="p-button-text" label="Activate 2rd"
+        [style]="{'margin-left': '.5em'}"></p-button>
+      <p-button (click)="activeIndex = 2" styleClass="p-button-text" label="Activate 3rd"
+        [style]="{'margin-left': '.5em'}"></p-button>
+    </div>
+    <p-tabView [(activeIndex)]="activeIndex">
+      <p-tabPanel header="Header I">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Header II">
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+          architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+          aut fugit, sed quia consequuntur magni dolores eos qui ratione
+          voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.</p>
+      </p-tabPanel>
+      <p-tabPanel header="Header III">
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+          corrupti quos dolores et quas molestias excepturi sint occaecati
+          cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+          fuga. Et harum quidem rerum facilis est et expedita distinctio.
+          Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</p>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+  
+  <div class="card" style="display: none">
+    <h5>Disabled</h5>
+    <p-tabView>
+      <p-tabPanel header="Header I">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Header II">
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+          architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+          aut fugit, sed quia consequuntur magni dolores eos qui ratione
+          voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.</p>
+      </p-tabPanel>
+      <p-tabPanel header="Header III">
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+          corrupti quos dolores et quas molestias excepturi sint occaecati
+          cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+          fuga. Et harum quidem rerum facilis est et expedita distinctio.
+          Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</p>
+      </p-tabPanel>
+      <p-tabPanel [disabled]="true" header="Header IV">
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+  
+  <div class="card" style="display: none">
+    <h5>Custom Headers</h5>
+    <p-tabView styleClass="tabview-custom">
+      <p-tabPanel>
+        <ng-template pTemplate="header">
+          <i class="pi pi-calendar"></i>
+          <span>Header I</span>
+        </ng-template>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Header II">
+        <ng-template pTemplate="header">
+          <i class="pi pi-user"></i>
+          <span>Header II</span>
+        </ng-template>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+          architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+          aut fugit, sed quia consequuntur magni dolores eos qui ratione
+          voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.</p>
+      </p-tabPanel>
+      <p-tabPanel header="Header III">
+        <ng-template pTemplate="header">
+          <i class="pi pi-search"></i>
+          <span>Header III</span>
+          <i class="pi pi-cog"></i>
+        </ng-template>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+          corrupti quos dolores et quas molestias excepturi sint occaecati
+          cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+          fuga. Et harum quidem rerum facilis est et expedita distinctio.
+          Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</p>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+  
+  <div class="card" style="display: none">
+    <h5>Closable</h5>
+    <p-tabView id="closableTabView">
+      <p-tabPanel header="Header I" [selected]="true">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Header II" [closable]="true">
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+          architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+          aut fugit, sed quia consequuntur magni dolores eos qui ratione
+          voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.</p>
+      </p-tabPanel>
+      <p-tabPanel header="Header III" [closable]="true">
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+          corrupti quos dolores et quas molestias excepturi sint occaecati
+          cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+          fuga. Et harum quidem rerum facilis est et expedita distinctio.
+          Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</p>
+      </p-tabPanel>
+    </p-tabView>
+  
+  </div>
+  
+  <div class="card" style="display: none">
+    <h5>Tooltips</h5>
+    <p-tabView>
+      <p-tabPanel header="Header I" leftIcon="pi pi-calendar" tooltip="1972">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Header II" rightIcon="pi pi-inbox" tooltip="1974">
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+          architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+          aut fugit, sed quia consequuntur magni dolores eos qui ratione
+          voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.</p>
+      </p-tabPanel>
+      <p-tabPanel header="Header III" leftIcon="pi pi-user" rightIcon="pi pi-star" tooltip="1990">
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+          corrupti quos dolores et quas molestias excepturi sint occaecati
+          cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+          fuga. Et harum quidem rerum facilis est et expedita distinctio.
+          Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</p>
+      </p-tabPanel>
+    </p-tabView>
+  </div>

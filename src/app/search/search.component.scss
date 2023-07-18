@@ -1,0 +1,15 @@
+.road{
+    height:170px;
+    width:100%;
+    background-color:rgb(222, 234, 237);
+    outline:dashed;
+    outline-offset:-10px;    
+    
+  }
+  :host::ng-deep .ui-inputtext {
+    background: lightskyblue; //change color here 
+}
+:host::ng-deep .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item,
+body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item-group {
+    background: lightgreen;
+}

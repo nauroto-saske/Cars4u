@@ -18,18 +18,21 @@ import { CardModule } from 'primeng/card';
 import { MessagesModule } from 'primeng/messages';
 import { EditorModule } from 'primeng/editor';
 import { ToastModule } from 'primeng/toast';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 
-import { BrowserAnimationsModule } 
-    from "@angular/platform-browser/animations";
-import RegisterService from './Models/register.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
 import { ProductsComponent } from './add-listing/products/products.component';
 import { OrdersComponent } from './add-listing/orders/orders.component';
 import { AccountComponent } from './add-listing/account/account.component';
 import { CustomerComponent } from './customer/customer.component';
-
+import { GalleriaModule } from 'primeng/galleria';
+import { TabViewModule } from "primeng/tabview";
+import { CarouselModule } from 'primeng/carousel';
+import { SearchComponent } from './search/search.component';
+import { AvatarModule } from 'primeng/avatar';   
+import RegisterService from './Models/register.service';
     
 export const appRoutes: Routes = [  
 { path: '', component: DashboardComponent },  
@@ -50,7 +53,7 @@ export const appRoutes: Routes = [
     OrdersComponent,
     AccountComponent,
     CustomerComponent,
-    
+    SearchComponent
   ],
   imports: [    
     BrowserModule,
@@ -69,7 +72,11 @@ export const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     MessagesModule,
     EditorModule,
-    ToastModule
+    ToastModule,
+    GalleriaModule,
+    TabViewModule,
+    CarouselModule,
+    AvatarModule
   ],
   providers: [RegisterService],
   bootstrap: [AppComponent]
