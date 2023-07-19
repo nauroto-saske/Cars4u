@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
    ]
    productsOne: any;
    selectedOrders : any;
-   products: any | undefined;
+   product: any | undefined;
 
    responsiveOptions: any[] = [
        {
@@ -39,7 +39,7 @@ export class DashboardComponent implements OnInit {
 
    }
   ngOnInit() {
-    this.products =  [
+    this.product =  [
       {
           id: '1000',
           code: 'f230fh0g3',

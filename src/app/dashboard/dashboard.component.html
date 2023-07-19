@@ -27,17 +27,17 @@
     </div>
 </div>
     <!--Section 3: Image Carosal -->
-<section>
+<section class="card" style="border: 1px solid black;">
     <div class="container">
-        <p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+        <p-carousel [value]="product" [numVisible]="5" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
             <ng-template let-product pTemplate="item">
                 <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
-                    <div class="mb-3" >
-                        <img src="../../assets/images/{{products.image}}" [alt]="products.name" class="w-6 shadow-2" />
+                    <div class="mb-3">
+                        <img src="../../assets/images/{{product.image}}" [alt]="product.name" class="w-6 shadow-2"/>
                     </div>
                     <div>
-                        <h4 class="mb-1">{{ products.name }}</h4>
-                        <h6 class="mt-0 mb-3">{{ '$' + products.price }}</h6>
+                        <h4 class="mb-1">{{ product.name }}</h4>
+                        <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
                       
                         <div class="car-buttons mt-5">
                             <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
@@ -188,9 +188,7 @@
         </div>
     </section>
 <!--Section 5: News Letter -->
-<div class="card w-100" style="-webkit-box-shadow: 0px -1px 4px 0px rgba(77,77,77,0.72);
--moz-box-shadow: 0px -1px 4px 0px rgba(77,77,77,0.72);
-box-shadow: 0px -1px 4px 0px rgba(77,77,77,0.72);">
+<div class="card w-100" style="border-radius: 0px;box-shadow: none;">
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-3">
@@ -199,11 +197,40 @@ box-shadow: 0px -1px 4px 0px rgba(77,77,77,0.72);">
         <div class="col-md-5">
             <input type="text" placeholder="Enter Email Address" style="height: 53px;width: 60%;border-radius: 10px;font-size: 15px;
                 padding-left: 27px;box-shadow: 1px 1px 0 0 rgba(196,196,196,.24);border: solid 1px #e7edf3;background-color: #fff;">
-            &nbsp;<p-button label="SignUp" styleClass="btn btn-danger"></p-button>
+            &nbsp;<p-button label="SignUp" styleClass="p-button-danger" [style]="{'background-color':'#ff4605'}"></p-button>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2" style="font-size: small;margin-left: -3cm;margin-top: 0.2cm;">
             Subscribe to our newsletter and stay updated with our offer
         </div>
     </div>
 </div>
 
+<!-- Section6: Footer -->
+<div class="card w-100" style="border-radius: 0px;background-color:#222732;padding:3% 3% 0% 5%;">
+    <div class="row col-sm-12 footer">
+        <div class="col-sm-1">
+            <img src="../../assets/images/logo.png" style="width: 100%">&nbsp;
+        </div>
+        <div class="col-sm-3" style="margin-left:1cm;">
+            <div class="row">
+                <div class="col-md-3"><a routerLink="/login" style="color:#FFF;"><i style="color:#FFF;" class="pi pi-user"></i>&nbsp;Login</a></div>
+                <div class="col-md-1" style="color:#FFF;"><p>|</p></div>
+                <div class="col-md-4"><p routerLink="/Register" style="color:#FFF;">Register</p></div>
+            </div>
+        </div>
+        <div class="col-sm-4" style="margin-left:-1cm;">
+            <p style="color: aliceblue; font-family: Arial, Helvetica, sans-serif;top:4cm; font-size: small;">
+                Award-winning, family owned dealership of new and pre-owned vehicles with several locations across the
+                city. Lowest prices and the best customer service guaranteed.
+            </p>
+        </div>
+        <div class="col-sm-4" style="float:right;">
+            <p style="text-align: right;"><a style="color: #ff4605;">+(123) 456-78901</a></p>
+            <p style="text-align: right; color:#FFF">support@cars4u.com</p>
+            <p style="text-align: right; color:#FFF">West 12th Street New York, NY, USA</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4" style="color: #FFF;font-size: small;"><p>Copyright © 2023. All rights reserved.&nbsp;<a href="_blank">Privacy Policy</a></p></div>
+        </div>
+    </div>
+</div>
